@@ -1,14 +1,19 @@
 let game = {
+	//initial board state
 	board : ["E","E","E","E","E","E","E","E","E"],
+	//X always plays first
 	turn : "X",
 	result: "",
 	winner: "",
 	symbol: "",
+	//list of posible winning moves
 	winTable : [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]],
+	//to change turns
 	nextTurn() { 
 		this.turn = this.turn === "X" ? "O" : "X";
 		$("#turn").html(`${this.turn}'s`);
 	},
+	//to check which part of the board are still empty (no symbol placed)
 	checkEmpty() {
 		let count = [];
 		for (var i = 0; i < 9; i++) {
@@ -16,6 +21,7 @@ let game = {
 		}
 		return count;
 	},
+	//to check if the game is finished (someone won or it's a draw)
 	endGame() {
 		let brd = this.board;
 		//row check
@@ -54,6 +60,7 @@ let game = {
 		}
 	return false;
 	},
+	//check if there is a winning move available
 	checkIfWin(symbol,board) {
 		let table = this.winTable;
 		for (let i = 0, len = table.length; i < len; i++) {
@@ -62,6 +69,7 @@ let game = {
 			}
 		return [];
 	},
+	//function to handle the animation for showing the winner
 	announceWinner() {
 		var arr = this.checkIfWin(this.winner,this.board);
 		for (var i=0,len=arr.length; i < len; i++) {
@@ -79,6 +87,7 @@ let game = {
 			$('#endBoard').fadeIn('fast');
 		});
 	},
+	//for restarting the game
 	reset() {
 		this.board = ["E","E","E","E","E","E","E","E","E"];
 		this.turn = "X";
