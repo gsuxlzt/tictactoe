@@ -5,7 +5,7 @@ let game = {
 	turn : "X",
 	result: "",
 	winner: "",
-	symbol: "",
+	symbol: "X",
 	//list of posible winning moves
 	winTable : [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]],
 	//to change turns
@@ -93,7 +93,9 @@ let game = {
 		this.turn = "X";
 		this.winner = "";
 		this.result = "";
-		this.symbol = "";
+		this.symbol = "X";
+		ai.symbol = "O";
+
 		$("#turn").html("X's");
 	}
 }	

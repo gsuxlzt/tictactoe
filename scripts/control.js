@@ -65,5 +65,6 @@
 		$('.choose').each(function(){
 			$(this).removeClass('active').addClass('inactive');
 		})
+		$("#X").addClass('active');
 		$('#start').fadeIn('fast')});
 	})

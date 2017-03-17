@@ -1,18 +1,19 @@
 let ai = {
-	symbol :"",
+	symbol :"O",
 	//for determining the symbol used by the AI
 	setSymbol() {
 		this.symbol = game.symbol === "X" ? "O" : "X";
 	},
 	//to check if the AI can win
 	checkTime(symbol){
+		let sym = symbol;
 		let counter;
 		let brd = game.board;
 		for (let i=0, len=brd.length; i < len; i++) {
 			if (brd[i] !== "E") continue;
 			let board = [].concat(brd);
-			board[i] = symbol;
-			let check = game.checkIfWin(symbol,board);
+			board[i] = sym;
+			let check = game.checkIfWin(sym,board);
 			if(check.length > 0) {
 				counter = i;
 				break;
