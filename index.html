@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TicTacToe</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div id="start">
+		<div>
+			<h2>Choose your symbol:&nbsp;<h1 class="choose inactive">X</h1> or <h1 class="choose inactive">O</h1></h2>
+		</div>
+		<button id="gameStart">START</button>
+	</div>
+	<div>
+		<div id="gameTime" style="padding-bottom: 94px;">
+			<h1> It is <span id="turn"> X's </span> turn</h1>
+		</div>
+		<div id="endBoard" style="padding-bottom:42px;">
+			<div>
+				<h1 id="result"></h1>
+			</div>
+			<button id="resetGame">PLAY AGAIN</button>
+		</div>
+	</div>
+	<div class="main">
+		<div class="board">
+			<div class="table disabled" data-num="0" ></div>
+			<div class="table disabled" data-num="1" ></div>
+			<div class="table disabled" data-num="2" ></div>
+			<div class="table disabled" data-num="3" ></div>
+			<div class="table disabled" data-num="4" ></div>
+			<div class="table disabled" data-num="5" ></div>
+			<div class="table disabled" data-num="6" ></div>
+			<div class="table disabled" data-num="7" ></div>
+			<div class="table disabled" data-num="8" ></div>
+		</div>
+	</div>
+	<footer>
+  <p> Created by: <a href="http://codepen.io/kingjami/" target="_blank">kingJami</a></p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="scripts/game.js"></script>
+<script src="scripts/ai.js"></script>
+<script src="scripts/control.js"></script>
+</body>
+</html>

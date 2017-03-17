@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Jim+Nightshade');
+
+body {
+	overflow: hidden;
+	font-family: 'Inconsolata', monospace;
+	color: #333333;
+}
+
+#start, .main, #gameTime, #endBoard {
+	margin: 0 auto;
+	padding: 30px;
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+
+#gameTime, #endBoard {
+	display: none;
+
+}
+
+h1, h2 {
+	display: inline-block;
+}
+
+.choose {
+	font-family: 'Jim Nightshade', cursive;
+	cursor: pointer;
+}
+
+.active {
+	color: #7ACA99;
+}
+.board {
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+.table {
+	font-family: 'Jim Nightshade', cursive;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #7ACA99;
+	text-align: center;
+	float: left;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 100px;
+}
+
+.disabled {
+	pointer-events: none;
+	opacity: 0.7;
+	background-color: #f4f4f4;
+}
+#gameStart, #resetGame {
+	color: #333333;
+	border: 2px solid #7ACA99;
+	border-radius: 10px;
+	font-size: 16px;
+	text-decoration: none;
+    padding: 15px 32px;
+    cursor: pointer;
+    background-color: white;
+    -webkit-transition: all .3s; /* Safari */
+    transition: all .3s;
+}
+
+#gameStart:hover, #resetGame:hover {
+	background-color: #7ACA99;
+	color: white;
+	font-weight: bolder;
+}
+
+#gameStart:visited, #gameStart:active, #gameStart:focus,
+#resetGame:visited, #resetGame:active, #resetGame:focus {
+	outline: none;
+}
+
+footer {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	width: 100%;
+	background-color: #7ACA99;
+	font-size: 0.7em;
+  	text-align: center;
+}
+footer > p {
+	margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
