@@ -4,7 +4,7 @@ My personal implementation of the game with a somewhat beatable AI. This is part
 
 ## User Stories
 
-1/I can play a game of Tic Tac Toe with the computer.
+1. I can play a game of Tic Tac Toe with the computer.
 
 2. My game will reset as soon as it's over so I can play again.
 
